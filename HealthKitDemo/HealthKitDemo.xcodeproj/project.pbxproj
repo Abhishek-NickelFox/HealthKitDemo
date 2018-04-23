@@ -14,7 +14,57 @@
 		46131A24208DEF1D005FB331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46131A22208DEF1D005FB331 /* LaunchScreen.storyboard */; };
 		46131A2D208DF28C005FB331 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46131A2C208DF28B005FB331 /* HealthKit.framework */; };
 		46131A31208DF34E005FB331 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46131A30208DF34E005FB331 /* HealthManager.swift */; };
+		46266A6A208E36B0005912ED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46266A68208E36B0005912ED /* Interface.storyboard */; };
+		46266A6C208E36B1005912ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46266A6B208E36B1005912ED /* Assets.xcassets */; };
+		46266A73208E36B1005912ED /* HKDemo Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 46266A72208E36B1005912ED /* HKDemo Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		46266A78208E36B1005912ED /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46266A77208E36B1005912ED /* InterfaceController.swift */; };
+		46266A7A208E36B1005912ED /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46266A79208E36B1005912ED /* ExtensionDelegate.swift */; };
+		46266A7C208E36B1005912ED /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46266A7B208E36B1005912ED /* NotificationController.swift */; };
+		46266A7E208E36B2005912ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46266A7D208E36B2005912ED /* Assets.xcassets */; };
+		46266A83208E36B2005912ED /* HKDemo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 46266A66208E36B0005912ED /* HKDemo.app */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46266A74208E36B1005912ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46131A0E208DEF1B005FB331 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46266A71208E36B1005912ED;
+			remoteInfo = "HKDemo Extension";
+		};
+		46266A81208E36B2005912ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46131A0E208DEF1B005FB331 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46266A65208E36B0005912ED;
+			remoteInfo = HKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46266A89208E36B2005912ED /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				46266A73208E36B1005912ED /* HKDemo Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46266A8B208E36B2005912ED /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				46266A83208E36B2005912ED /* HKDemo.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		46131A16208DEF1B005FB331 /* HealthKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +77,17 @@
 		46131A2C208DF28B005FB331 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		46131A2E208DF28C005FB331 /* HealthKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitDemo.entitlements; sourceTree = "<group>"; };
 		46131A30208DF34E005FB331 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		46266A66208E36B0005912ED /* HKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46266A69208E36B0005912ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		46266A6B208E36B1005912ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46266A6D208E36B1005912ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46266A72208E36B1005912ED /* HKDemo Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HKDemo Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46266A77208E36B1005912ED /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		46266A79208E36B1005912ED /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		46266A7B208E36B1005912ED /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		46266A7D208E36B2005912ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46266A7F208E36B2005912ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46266A80208E36B2005912ED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46266A6F208E36B1005912ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				46131A18208DEF1B005FB331 /* HealthKitDemo */,
+				46266A67208E36B0005912ED /* HKDemo */,
+				46266A76208E36B1005912ED /* HKDemo Extension */,
 				46131A17208DEF1B005FB331 /* Products */,
 				46131A2B208DF28B005FB331 /* Frameworks */,
 			);
@@ -54,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				46131A16208DEF1B005FB331 /* HealthKitDemo.app */,
+				46266A66208E36B0005912ED /* HKDemo.app */,
+				46266A72208E36B1005912ED /* HKDemo Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +161,29 @@
 			path = HealthManager;
 			sourceTree = "<group>";
 		};
+		46266A67208E36B0005912ED /* HKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				46266A68208E36B0005912ED /* Interface.storyboard */,
+				46266A6B208E36B1005912ED /* Assets.xcassets */,
+				46266A6D208E36B1005912ED /* Info.plist */,
+			);
+			path = HKDemo;
+			sourceTree = "<group>";
+		};
+		46266A76208E36B1005912ED /* HKDemo Extension */ = {
+			isa = PBXGroup;
+			children = (
+				46266A77208E36B1005912ED /* InterfaceController.swift */,
+				46266A79208E36B1005912ED /* ExtensionDelegate.swift */,
+				46266A7B208E36B1005912ED /* NotificationController.swift */,
+				46266A7D208E36B2005912ED /* Assets.xcassets */,
+				46266A7F208E36B2005912ED /* Info.plist */,
+				46266A80208E36B2005912ED /* PushNotificationPayload.apns */,
+			);
+			path = "HKDemo Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,15 +194,51 @@
 				46131A12208DEF1B005FB331 /* Sources */,
 				46131A13208DEF1B005FB331 /* Frameworks */,
 				46131A14208DEF1B005FB331 /* Resources */,
+				46266A8B208E36B2005912ED /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46266A82208E36B2005912ED /* PBXTargetDependency */,
 			);
 			name = HealthKitDemo;
 			productName = HealthKitDemo;
 			productReference = 46131A16208DEF1B005FB331 /* HealthKitDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		46266A65208E36B0005912ED /* HKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46266A8A208E36B2005912ED /* Build configuration list for PBXNativeTarget "HKDemo" */;
+			buildPhases = (
+				46266A64208E36B0005912ED /* Resources */,
+				46266A89208E36B2005912ED /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46266A75208E36B1005912ED /* PBXTargetDependency */,
+			);
+			name = HKDemo;
+			productName = HKDemo;
+			productReference = 46266A66208E36B0005912ED /* HKDemo.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		46266A71208E36B1005912ED /* HKDemo Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46266A88208E36B2005912ED /* Build configuration list for PBXNativeTarget "HKDemo Extension" */;
+			buildPhases = (
+				46266A6E208E36B1005912ED /* Sources */,
+				46266A6F208E36B1005912ED /* Frameworks */,
+				46266A70208E36B1005912ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HKDemo Extension";
+			productName = "HKDemo Extension";
+			productReference = 46266A72208E36B1005912ED /* HKDemo Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -128,6 +259,14 @@
 							};
 						};
 					};
+					46266A65208E36B0005912ED = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
+					46266A71208E36B1005912ED = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 46131A11208DEF1B005FB331 /* Build configuration list for PBXProject "HealthKitDemo" */;
@@ -144,6 +283,8 @@
 			projectRoot = "";
 			targets = (
 				46131A15208DEF1B005FB331 /* HealthKitDemo */,
+				46266A65208E36B0005912ED /* HKDemo */,
+				46266A71208E36B1005912ED /* HKDemo Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +297,23 @@
 				46131A24208DEF1D005FB331 /* LaunchScreen.storyboard in Resources */,
 				46131A21208DEF1D005FB331 /* Assets.xcassets in Resources */,
 				46131A1F208DEF1B005FB331 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46266A64208E36B0005912ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46266A6C208E36B1005912ED /* Assets.xcassets in Resources */,
+				46266A6A208E36B0005912ED /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46266A70208E36B1005912ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46266A7E208E36B2005912ED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +330,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46266A6E208E36B1005912ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46266A7C208E36B1005912ED /* NotificationController.swift in Sources */,
+				46266A7A208E36B1005912ED /* ExtensionDelegate.swift in Sources */,
+				46266A78208E36B1005912ED /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46266A75208E36B1005912ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46266A71208E36B1005912ED /* HKDemo Extension */;
+			targetProxy = 46266A74208E36B1005912ED /* PBXContainerItemProxy */;
+		};
+		46266A82208E36B2005912ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46266A65208E36B0005912ED /* HKDemo */;
+			targetProxy = 46266A81208E36B2005912ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		46131A1D208DEF1B005FB331 /* Main.storyboard */ = {
@@ -189,6 +370,14 @@
 				46131A23208DEF1D005FB331 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		46266A68208E36B0005912ED /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46266A69208E36B0005912ED /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -339,6 +528,80 @@
 			};
 			name = Release;
 		};
+		46266A84208E36B2005912ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NY45473NT8;
+				IBSC_MODULE = HKDemo_Extension;
+				INFOPLIST_FILE = HKDemo/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickelfox.HealthKitDemo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		46266A85208E36B2005912ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NY45473NT8;
+				IBSC_MODULE = HKDemo_Extension;
+				INFOPLIST_FILE = HKDemo/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickelfox.HealthKitDemo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		46266A86208E36B2005912ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KC9N23CAXG;
+				INFOPLIST_FILE = "HKDemo Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickelfox.HealthKitDemo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		46266A87208E36B2005912ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KC9N23CAXG;
+				INFOPLIST_FILE = "HKDemo Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickelfox.HealthKitDemo.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -356,6 +619,24 @@
 			buildConfigurations = (
 				46131A29208DEF1D005FB331 /* Debug */,
 				46131A2A208DEF1D005FB331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46266A88208E36B2005912ED /* Build configuration list for PBXNativeTarget "HKDemo Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46266A86208E36B2005912ED /* Debug */,
+				46266A87208E36B2005912ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46266A8A208E36B2005912ED /* Build configuration list for PBXNativeTarget "HKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46266A84208E36B2005912ED /* Debug */,
+				46266A85208E36B2005912ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

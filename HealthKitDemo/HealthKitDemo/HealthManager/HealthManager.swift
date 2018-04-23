@@ -8,6 +8,7 @@
 
 import Foundation
 import HealthKit
+import WatchConnectivity
 
 class MyError: Error {
     var message: String
@@ -33,13 +34,14 @@ class HealthManager {
         }
         
         //2. Prepare the data types that will interact with HealthKit
-        guard   let dateOfBirth = HKObjectType.characteristicType(forIdentifier: .dateOfBirth),
-            let bloodType = HKObjectType.characteristicType(forIdentifier: .bloodType),
-            let biologicalSex = HKObjectType.characteristicType(forIdentifier: .biologicalSex),
-            let bodyMassIndex = HKObjectType.quantityType(forIdentifier: .bodyMassIndex),
-            let height = HKObjectType.quantityType(forIdentifier: .height),
-            let bodyMass = HKObjectType.quantityType(forIdentifier: .bodyMass),
-            let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
+        guard let dateOfBirth = HKObjectType.characteristicType(forIdentifier: .dateOfBirth),
+                let bloodType = HKObjectType.characteristicType(forIdentifier: .bloodType),
+                let biologicalSex = HKObjectType.characteristicType(forIdentifier: .biologicalSex),
+                let bodyMassIndex = HKObjectType.quantityType(forIdentifier: .bodyMassIndex),
+                let height = HKObjectType.quantityType(forIdentifier: .height),
+                let bodyMass = HKObjectType.quantityType(forIdentifier: .bodyMass),
+                let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned),
+                let heartRate = HKObjectType.quantityType(forIdentifier: .heartRate) else {
                 
             completion(false, error)
             return
@@ -56,6 +58,7 @@ class HealthManager {
                                                        bodyMassIndex,
                                                        height,
                                                        bodyMass,
+                                                       heartRate,
                                                        HKObjectType.workoutType()]
         
         //4. Request Authorization
