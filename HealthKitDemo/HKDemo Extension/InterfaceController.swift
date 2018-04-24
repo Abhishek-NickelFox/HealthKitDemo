@@ -35,13 +35,13 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     override func willActivate() {
         super.willActivate()
         
-        guard HKHealthStore.isHealthDataAvailable() == true else {
-            label.setText("not available")
+        guard HKHealthStore.isHealthDataAvailable() else {
+            self.label.setText("not available")
             return
         }
         
         guard let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
-            displayNotAllowed()
+            self.displayNotAllowed()
             return
         }
         
@@ -54,15 +54,17 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     }
     
     func displayNotAllowed() {
-        label.setText("not allowed")
+        self.label.setText("Not Allowed")
     }
     
-    func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
+    func workoutSession(_ workoutSession: HKWorkoutSession,
+                        didChangeTo toState: HKWorkoutSessionState,
+                        from fromState: HKWorkoutSessionState, date: Date) {
         switch toState {
         case .running:
-            workoutDidStart(date)
+            self.workoutDidStart(date)
         case .ended:
-            workoutDidEnd(date)
+            self.workoutDidEnd(date)
         default:
             print("Unexpected state \(toState)")
         }
@@ -77,16 +79,16 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     func workoutDidStart(_ date : Date) {
         if let query = createHeartRateStreamingQuery(date) {
             self.currenQuery = query
-            healthStore.execute(query)
+            self.healthStore.execute(query)
         } else {
-            label.setText("cannot start")
+            self.label.setText("cannot start")
         }
     }
     
     func workoutDidEnd(_ date : Date) {
         healthStore.stop(self.currenQuery!)
         label.setText("---")
-        session = nil
+        self.session = nil
     }
     
     // MARK: - Actions
@@ -96,23 +98,21 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
             self.workoutActive = false
             self.startStopButton.setTitle("Start")
             if let workout = self.session {
-                healthStore.end(workout)
+                self.healthStore.end(workout)
             }
         } else {
             //start a new workout
             self.workoutActive = true
             self.startStopButton.setTitle("Stop")
-            startWorkout()
+            self.startWorkout()
         }
         
     }
     
     func startWorkout() {
         
-        // If we have already started the workout, then do nothing.
-        if (session != nil) {
-            return
-        }
+        // If we have already started the workout, then do nothing.        
+        if let _ = self.session { return }
         
         // Configure the workout session.
         let workoutConfiguration = HKWorkoutConfiguration()
@@ -120,13 +120,13 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         workoutConfiguration.locationType = .indoor
         
         do {
-            session = try HKWorkoutSession(configuration: workoutConfiguration)
-            session?.delegate = self
+            self.session = try HKWorkoutSession(configuration: workoutConfiguration)
+            self.session?.delegate = self
         } catch {
             fatalError("Unable to create the workout session!")
         }
         
-        healthStore.start(self.session!)
+        self.healthStore.start(self.session!)
     }
     
     func createHeartRateStreamingQuery(_ workoutStartDate: Date) -> HKQuery? {
@@ -171,6 +171,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     }
     
     func animateHeart() {
+        
         self.animate(withDuration: 0.5) {
             self.heart.setWidth(60)
             self.heart.setHeight(90)

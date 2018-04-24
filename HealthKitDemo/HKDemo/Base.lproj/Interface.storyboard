@@ -22,7 +22,7 @@
                         <label height="20" alignment="center" text="Device Name" id="o8D-p9-0tn"/>
                         <group width="1" alignment="left" id="sg2-2j-tEf">
                             <items>
-                                <imageView alignment="left" image="heart" id="BSK-yL-iFZ"/>
+                                <imageView alignment="left" image="heart" contentMode="scaleAspectFit" id="BSK-yL-iFZ"/>
                                 <label alignment="center" text="---" minimumScaleFactor="0.20000000000000001" id="mG5-a0-Ksz">
                                     <fontDescription key="font" name="Symbol" family="Symbol" pointSize="28"/>
                                 </label>
