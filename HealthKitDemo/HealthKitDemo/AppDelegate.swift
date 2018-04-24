@@ -9,6 +9,7 @@
 import UIKit
 import HealthKit
 import Firebase
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        //WATCH KIT SESSION
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        
         return true
     }
 
@@ -52,5 +61,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func application(_ application: UIApplication,
+                     handleWatchKitExtensionRequest userInfo: [AnyHashable : Any]?,
+                     reply: @escaping ([AnyHashable : Any]?) -> Void) {
+        // NOT WORKING : MAY BE DEPECRATED AFTER WATCH OS 1
+        print("USER INFO: \(userInfo)")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "APP_EXTENSION_REQUEST"),
+                                        object: userInfo)
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        print("SESSION USER INFO: \(message)")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "APP_EXTENSION_REQUEST"),
+                                        object: message)
+    }
+    
+}
+
+extension AppDelegate: WCSessionDelegate {
+    
+    func session(_ session: WCSession,
+                 activationDidCompleteWith activationState: WCSessionActivationState,
+                 error: Error?) {
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
 }
 
