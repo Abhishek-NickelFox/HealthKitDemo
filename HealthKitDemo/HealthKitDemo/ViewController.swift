@@ -18,5 +18,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func addAction(_ sender: UIButton) {
+        FirebaseManager.shared.add(item: HealthData(heartRate: 44, timeStamp: "1234567890"))
+    }
+    
 }
 

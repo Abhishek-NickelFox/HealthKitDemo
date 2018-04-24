@@ -16,6 +16,7 @@
 		46131A2D208DF28C005FB331 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46131A2C208DF28B005FB331 /* HealthKit.framework */; };
 		46131A31208DF34E005FB331 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46131A30208DF34E005FB331 /* HealthManager.swift */; };
 		46153626208F32A7005FA296 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46153625208F32A7005FA296 /* HealthKit.framework */; };
+		46153628208F3622005FA296 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46153627208F3622005FA296 /* FirebaseManager.swift */; };
 		46266A6A208E36B0005912ED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46266A68208E36B0005912ED /* Interface.storyboard */; };
 		46266A6C208E36B1005912ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46266A6B208E36B1005912ED /* Assets.xcassets */; };
 		46266A73208E36B1005912ED /* HKDemo Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 46266A72208E36B1005912ED /* HKDemo Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -24,6 +25,7 @@
 		46266A7C208E36B1005912ED /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46266A7B208E36B1005912ED /* NotificationController.swift */; };
 		46266A7E208E36B2005912ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46266A7D208E36B2005912ED /* Assets.xcassets */; };
 		46266A83208E36B2005912ED /* HKDemo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 46266A66208E36B0005912ED /* HKDemo.app */; };
+		46682CC9208F406800A4F11B /* ModelFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46682CC8208F406800A4F11B /* ModelFile.swift */; };
 		46F1A416208F2EA300DCA37D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */; };
 		892A0B2483C5316351DC22D0 /* Pods_HKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C50E9BC9047241E85E6C8A7 /* Pods_HKDemo.framework */; };
 		CF0C039EE47C2EE4008A75C6 /* Pods_HKDemo_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7912CFA5EECCD6993C070C /* Pods_HKDemo_Extension.framework */; };
@@ -85,6 +87,7 @@
 		46131A2E208DF28C005FB331 /* HealthKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitDemo.entitlements; sourceTree = "<group>"; };
 		46131A30208DF34E005FB331 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		46153625208F32A7005FA296 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		46153627208F3622005FA296 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		46266A66208E36B0005912ED /* HKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46266A69208E36B0005912ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		46266A6B208E36B1005912ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		46266A7D208E36B2005912ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46266A7F208E36B2005912ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46266A80208E36B2005912ED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		46682CC8208F406800A4F11B /* ModelFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFile.swift; sourceTree = "<group>"; };
 		46F1A414208EF6EC00DCA37D /* HKDemo Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "HKDemo Extension.entitlements"; path = "HKDemo Extension/HKDemo Extension.entitlements"; sourceTree = SOURCE_ROOT; };
 		46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C50E9BC9047241E85E6C8A7 /* Pods_HKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +175,8 @@
 				46131A20208DEF1D005FB331 /* Assets.xcassets */,
 				46131A22208DEF1D005FB331 /* LaunchScreen.storyboard */,
 				46131A25208DEF1D005FB331 /* Info.plist */,
+				46153627208F3622005FA296 /* FirebaseManager.swift */,
+				46682CC8208F406800A4F11B /* ModelFile.swift */,
 			);
 			path = HealthKitDemo;
 			sourceTree = "<group>";
@@ -453,12 +459,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HealthKitDemo/Pods-HealthKitDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,8 +544,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46153628208F3622005FA296 /* FirebaseManager.swift in Sources */,
 				46131A1C208DEF1B005FB331 /* ViewController.swift in Sources */,
 				46131A31208DF34E005FB331 /* HealthManager.swift in Sources */,
+				46682CC9208F406800A4F11B /* ModelFile.swift in Sources */,
 				46131A1A208DEF1B005FB331 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
