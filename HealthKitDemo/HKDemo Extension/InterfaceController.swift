@@ -46,8 +46,8 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         }
         
         let dataTypes = Set(arrayLiteral: quantityType)
-        healthStore.requestAuthorization(toShare: nil, read: dataTypes) { (success, error) -> Void in
-            if success == false {
+        self.healthStore.requestAuthorization(toShare: nil, read: dataTypes) { (success, error) -> Void in
+            if !success {
                 self.displayNotAllowed()
             }
         }
@@ -77,7 +77,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     
     func workoutDidStart(_ date : Date) {
-        if let query = createHeartRateStreamingQuery(date) {
+        if let query = self.createHeartRateStreamingQuery(date) {
             self.currenQuery = query
             self.healthStore.execute(query)
         } else {
@@ -131,7 +131,6 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     func createHeartRateStreamingQuery(_ workoutStartDate: Date) -> HKQuery? {
         
-        
         guard let quantityType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else { return nil }
         let datePredicate = HKQuery.predicateForSamples(withStart: workoutStartDate, end: nil, options: .strictEndDate )
         //let devicePredicate = HKQuery.predicateForObjects(from: [HKDevice.local()])
@@ -167,7 +166,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     }
     
     func updateDeviceName(_ deviceName: String) {
-        deviceLabel.setText(deviceName)
+        self.deviceLabel.setText(deviceName)
     }
     
     func animateHeart() {
