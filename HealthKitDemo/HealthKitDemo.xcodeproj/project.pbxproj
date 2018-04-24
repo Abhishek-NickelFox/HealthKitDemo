@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FD310063F6282D5037FCF35 /* Pods_HealthKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E3CF18D4230BCD83EB337F /* Pods_HealthKitDemo.framework */; };
 		46131A1A208DEF1B005FB331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46131A19208DEF1B005FB331 /* AppDelegate.swift */; };
 		46131A1C208DEF1B005FB331 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46131A1B208DEF1B005FB331 /* ViewController.swift */; };
 		46131A1F208DEF1B005FB331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46131A1D208DEF1B005FB331 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		46131A24208DEF1D005FB331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46131A22208DEF1D005FB331 /* LaunchScreen.storyboard */; };
 		46131A2D208DF28C005FB331 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46131A2C208DF28B005FB331 /* HealthKit.framework */; };
 		46131A31208DF34E005FB331 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46131A30208DF34E005FB331 /* HealthManager.swift */; };
+		46153626208F32A7005FA296 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46153625208F32A7005FA296 /* HealthKit.framework */; };
 		46266A6A208E36B0005912ED /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46266A68208E36B0005912ED /* Interface.storyboard */; };
 		46266A6C208E36B1005912ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46266A6B208E36B1005912ED /* Assets.xcassets */; };
 		46266A73208E36B1005912ED /* HKDemo Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 46266A72208E36B1005912ED /* HKDemo Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -22,6 +24,9 @@
 		46266A7C208E36B1005912ED /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46266A7B208E36B1005912ED /* NotificationController.swift */; };
 		46266A7E208E36B2005912ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46266A7D208E36B2005912ED /* Assets.xcassets */; };
 		46266A83208E36B2005912ED /* HKDemo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 46266A66208E36B0005912ED /* HKDemo.app */; };
+		46F1A416208F2EA300DCA37D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */; };
+		892A0B2483C5316351DC22D0 /* Pods_HKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C50E9BC9047241E85E6C8A7 /* Pods_HKDemo.framework */; };
+		CF0C039EE47C2EE4008A75C6 /* Pods_HKDemo_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7912CFA5EECCD6993C070C /* Pods_HKDemo_Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		039E4AA505995445EA0FB111 /* Pods-HKDemo Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKDemo Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HKDemo Extension/Pods-HKDemo Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		24221E0B74ABAACF922121C4 /* Pods-HKDemo Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKDemo Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-HKDemo Extension/Pods-HKDemo Extension.release.xcconfig"; sourceTree = "<group>"; };
 		46131A16208DEF1B005FB331 /* HealthKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46131A19208DEF1B005FB331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46131A1B208DEF1B005FB331 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 		46131A2C208DF28B005FB331 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		46131A2E208DF28C005FB331 /* HealthKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitDemo.entitlements; sourceTree = "<group>"; };
 		46131A30208DF34E005FB331 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		46153625208F32A7005FA296 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		46266A66208E36B0005912ED /* HKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46266A69208E36B0005912ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		46266A6B208E36B1005912ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +97,14 @@
 		46266A7F208E36B2005912ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46266A80208E36B2005912ED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		46F1A414208EF6EC00DCA37D /* HKDemo Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "HKDemo Extension.entitlements"; path = "HKDemo Extension/HKDemo Extension.entitlements"; sourceTree = SOURCE_ROOT; };
+		46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5C50E9BC9047241E85E6C8A7 /* Pods_HKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1241D9F43D1F0C2B663FED /* Pods-HealthKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKitDemo/Pods-HealthKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		81CA09F430E3C7B2EC53C82F /* Pods-HKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HKDemo/Pods-HKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AE7912CFA5EECCD6993C070C /* Pods_HKDemo_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HKDemo_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF49B97DED2D92F5C5958A15 /* Pods-HKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HKDemo/Pods-HKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D17671894B16EAEE7ECE502C /* Pods-HealthKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthKitDemo/Pods-HealthKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D1E3CF18D4230BCD83EB337F /* Pods_HealthKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46131A2D208DF28C005FB331 /* HealthKit.framework in Frameworks */,
+				2FD310063F6282D5037FCF35 /* Pods_HealthKitDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +121,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF0C039EE47C2EE4008A75C6 /* Pods_HKDemo_Extension.framework in Frameworks */,
+				46153626208F32A7005FA296 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BFF2AECEA75D0401DD72CDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892A0B2483C5316351DC22D0 /* Pods_HKDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +145,7 @@
 				46266A76208E36B1005912ED /* HKDemo Extension */,
 				46131A17208DEF1B005FB331 /* Products */,
 				46131A2B208DF28B005FB331 /* Frameworks */,
+				8A4AF25A024B1CA51D16A86D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +162,7 @@
 		46131A18208DEF1B005FB331 /* HealthKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */,
 				46131A2F208DF2A8005FB331 /* HealthManager */,
 				46131A2E208DF28C005FB331 /* HealthKitDemo.entitlements */,
 				46131A19208DEF1B005FB331 /* AppDelegate.swift */,
@@ -149,7 +178,11 @@
 		46131A2B208DF28B005FB331 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46153625208F32A7005FA296 /* HealthKit.framework */,
 				46131A2C208DF28B005FB331 /* HealthKit.framework */,
+				5C50E9BC9047241E85E6C8A7 /* Pods_HKDemo.framework */,
+				AE7912CFA5EECCD6993C070C /* Pods_HKDemo_Extension.framework */,
+				D1E3CF18D4230BCD83EB337F /* Pods_HealthKitDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +219,19 @@
 			path = "HKDemo Extension";
 			sourceTree = "<group>";
 		};
+		8A4AF25A024B1CA51D16A86D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF49B97DED2D92F5C5958A15 /* Pods-HKDemo.debug.xcconfig */,
+				81CA09F430E3C7B2EC53C82F /* Pods-HKDemo.release.xcconfig */,
+				039E4AA505995445EA0FB111 /* Pods-HKDemo Extension.debug.xcconfig */,
+				24221E0B74ABAACF922121C4 /* Pods-HKDemo Extension.release.xcconfig */,
+				D17671894B16EAEE7ECE502C /* Pods-HealthKitDemo.debug.xcconfig */,
+				5F1241D9F43D1F0C2B663FED /* Pods-HealthKitDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,10 +239,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46131A28208DEF1D005FB331 /* Build configuration list for PBXNativeTarget "HealthKitDemo" */;
 			buildPhases = (
+				50629AE8D1956B2DC27F031A /* [CP] Check Pods Manifest.lock */,
 				46131A12208DEF1B005FB331 /* Sources */,
 				46131A13208DEF1B005FB331 /* Frameworks */,
 				46131A14208DEF1B005FB331 /* Resources */,
 				46266A8B208E36B2005912ED /* Embed Watch Content */,
+				6919B3693972F1E9EA6CBC2D /* [CP] Embed Pods Frameworks */,
+				59926D19BB896E7B83679B98 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,8 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46266A8A208E36B2005912ED /* Build configuration list for PBXNativeTarget "HKDemo" */;
 			buildPhases = (
+				876FCB1E6AB13F34D497B1CD /* [CP] Check Pods Manifest.lock */,
 				46266A64208E36B0005912ED /* Resources */,
 				46266A89208E36B2005912ED /* Embed App Extensions */,
+				4BFF2AECEA75D0401DD72CDE /* Frameworks */,
+				0506509E2DE7156B9D38531D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46266A88208E36B2005912ED /* Build configuration list for PBXNativeTarget "HKDemo Extension" */;
 			buildPhases = (
+				8F1575089F1EF5030B930A12 /* [CP] Check Pods Manifest.lock */,
 				46266A6E208E36B1005912ED /* Sources */,
 				46266A6F208E36B1005912ED /* Frameworks */,
 				46266A70208E36B1005912ED /* Resources */,
+				CB234C2C2E1F81F18181B1F2 /* [CP] Embed Pods Frameworks */,
+				365ADBBEDF55B0F69D049A04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +323,11 @@
 					46266A71208E36B1005912ED = {
 						CreatedOnToolsVersion = 9.3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -297,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46131A24208DEF1D005FB331 /* LaunchScreen.storyboard in Resources */,
+				46F1A416208F2EA300DCA37D /* GoogleService-Info.plist in Resources */,
 				46131A21208DEF1D005FB331 /* Assets.xcassets in Resources */,
 				46131A1F208DEF1B005FB331 /* Main.storyboard in Resources */,
 			);
@@ -320,6 +381,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0506509E2DE7156B9D38531D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HKDemo/Pods-HKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		365ADBBEDF55B0F69D049A04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HKDemo Extension/Pods-HKDemo Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50629AE8D1956B2DC27F031A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthKitDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59926D19BB896E7B83679B98 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthKitDemo/Pods-HealthKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6919B3693972F1E9EA6CBC2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HealthKitDemo/Pods-HealthKitDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthKitDemo/Pods-HealthKitDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		876FCB1E6AB13F34D497B1CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F1575089F1EF5030B930A12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HKDemo Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB234C2C2E1F81F18181B1F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HKDemo Extension/Pods-HKDemo Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46131A12208DEF1B005FB331 /* Sources */ = {
@@ -500,6 +698,7 @@
 		};
 		46131A29208DEF1D005FB331 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D17671894B16EAEE7ECE502C /* Pods-HealthKitDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HealthKitDemo/HealthKitDemo.entitlements;
@@ -516,6 +715,7 @@
 		};
 		46131A2A208DEF1D005FB331 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1241D9F43D1F0C2B663FED /* Pods-HealthKitDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HealthKitDemo/HealthKitDemo.entitlements;
@@ -532,6 +732,7 @@
 		};
 		46266A84208E36B2005912ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF49B97DED2D92F5C5958A15 /* Pods-HKDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -551,6 +752,7 @@
 		};
 		46266A85208E36B2005912ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81CA09F430E3C7B2EC53C82F /* Pods-HKDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -570,6 +772,7 @@
 		};
 		46266A86208E36B2005912ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039E4AA505995445EA0FB111 /* Pods-HKDemo Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "HKDemo Extension/HKDemo Extension.entitlements";
@@ -589,6 +792,7 @@
 		};
 		46266A87208E36B2005912ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24221E0B74ABAACF922121C4 /* Pods-HKDemo Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "HKDemo Extension/HKDemo Extension.entitlements";

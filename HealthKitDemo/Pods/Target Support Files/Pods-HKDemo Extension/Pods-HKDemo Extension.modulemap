@@ -1,0 +1,6 @@
+framework module Pods_HKDemo_Extension {
+  umbrella header "Pods-HKDemo Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

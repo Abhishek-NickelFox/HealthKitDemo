@@ -157,7 +157,7 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
             guard let sample = heartRateSamples.first else{return}
             let value = sample.quantity.doubleValue(for: self.heartRateUnit)
             self.label.setText(String(UInt16(value)))
-            
+            print(String(UInt16(value)))
             // retrieve source from sample
             let name = sample.sourceRevision.source.name
             self.updateDeviceName(name)
