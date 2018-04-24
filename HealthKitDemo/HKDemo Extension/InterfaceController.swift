@@ -94,20 +94,22 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     
     // MARK: - Actions
     @IBAction func startBtnTapped() {
-//        if (self.workoutActive) {
-//            //finish the current workout
-//            self.workoutActive = false
-//            self.startStopButton.setTitle("Start")
-//            if let workout = self.session {
-//                self.healthStore.end(workout)
-//            }
-//        } else {
-//            //start a new workout
-//            self.workoutActive = true
-//            self.startStopButton.setTitle("Stop")
-//            self.startWorkout()
-//        }
-        self.interactMainApp()
+        if (self.workoutActive) {
+            //finish the current workout
+            self.workoutActive = false
+            self.startStopButton.setTitle("Start")
+            if let workout = self.session {
+                self.healthStore.end(workout)
+            }
+        } else {
+            //start a new workout
+            self.workoutActive = true
+            self.startStopButton.setTitle("Stop")
+            self.startWorkout()
+        }
+        
+        // SEND MESSAGE TO MAIN APP
+//        self.interactMainApp()
     }
     
     func startWorkout() {
