@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class ViewController: UIViewController {
 
@@ -21,7 +22,19 @@ class ViewController: UIViewController {
 
     func authorize() {
         HealthManager.shared.authorization { (_, _) in
-            
+            self.getData()
+        }
+    }
+    
+    func getData() {
+        do {
+            let userAgeSexAndBloodType = try HealthManager.shared.getAgeSexAndBloodType()
+            print(userAgeSexAndBloodType.age)
+            print(userAgeSexAndBloodType.biologicalSex)
+            print(userAgeSexAndBloodType.bloodType)
+            print(userAgeSexAndBloodType)
+        } catch let error {
+            print(error)
         }
     }
 

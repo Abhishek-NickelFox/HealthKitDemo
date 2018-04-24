@@ -69,7 +69,7 @@ class HealthManager {
         
     }
     
-    class func getAgeSexAndBloodType() throws -> (age: Int, biologicalSex: HKBiologicalSex, bloodType: HKBloodType) {
+    func getAgeSexAndBloodType() throws -> (age: Int, biologicalSex: HKBiologicalSex, bloodType: HKBloodType) {
             
             let healthKitStore = HKHealthStore()
             
