@@ -88,6 +88,7 @@
 		46266A7D208E36B2005912ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46266A7F208E36B2005912ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46266A80208E36B2005912ED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		46F1A414208EF6EC00DCA37D /* HKDemo Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "HKDemo Extension.entitlements"; path = "HKDemo Extension/HKDemo Extension.entitlements"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +165,7 @@
 		46266A67208E36B0005912ED /* HKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				46F1A414208EF6EC00DCA37D /* HKDemo Extension.entitlements */,
 				46266A68208E36B0005912ED /* Interface.storyboard */,
 				46266A6B208E36B1005912ED /* Assets.xcassets */,
 				46266A6D208E36B1005912ED /* Info.plist */,
@@ -570,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HKDemo Extension/HKDemo Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = "HKDemo Extension/Info.plist";
@@ -588,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HKDemo Extension/HKDemo Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NY45473NT8;
 				INFOPLIST_FILE = "HKDemo Extension/Info.plist";

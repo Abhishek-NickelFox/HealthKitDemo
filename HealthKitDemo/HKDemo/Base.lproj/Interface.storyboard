@@ -1,39 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DBC-fp-pWy">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Symbol.ttf">
+            <string>Symbol</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <scene sceneID="ykH-7h-yy3">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="220" y="345"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller id="DBC-fp-pWy" customClass="InterfaceController" customModule="VimoHeartRate_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <label height="20" alignment="center" text="Device Name" id="o8D-p9-0tn"/>
+                        <group width="1" alignment="left" id="sg2-2j-tEf">
+                            <items>
+                                <imageView alignment="left" image="heart" id="BSK-yL-iFZ"/>
+                                <label alignment="center" text="---" minimumScaleFactor="0.20000000000000001" id="mG5-a0-Ksz">
+                                    <fontDescription key="font" name="Symbol" family="Symbol" pointSize="28"/>
+                                </label>
+                                <label alignment="right" text="BPM" id="AGM-bF-tXB">
+                                    <color key="textColor" red="0.86132884030000001" green="0.058584794400000001" blue="0.11313973369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Start" id="JJd-cP-bmJ">
+                            <connections>
+                                <action selector="startBtnTapped" destination="DBC-fp-pWy" id="KLM-8V-gxK"/>
+                            </connections>
+                        </button>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <outlet property="deviceLabel" destination="o8D-p9-0tn" id="wkP-ph-3H8"/>
+                        <outlet property="heart" destination="BSK-yL-iFZ" id="Q4l-Vq-EAD"/>
+                        <outlet property="label" destination="mG5-a0-Ksz" id="lgx-1D-AHb"/>
+                        <outlet property="startStopButton" destination="JJd-cP-bmJ" id="ukM-Rd-5V7"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="305" y="350"/>
         </scene>
     </scenes>
 </document>
