@@ -34,7 +34,8 @@ class ViewController: UIViewController {
         let data = HealthData(heartRate: object["rate"] as! String,
                               timeStamp: object["timestamp"] as! String)
         heartRateQueue.enqueue(item: data)
-        heartRateQueue.traverse()
+        print("QUEUE COUNT : \(heartRateQueue.count)")
+        FirebaseManager.shared.add(item: data)
     }
     
     deinit {

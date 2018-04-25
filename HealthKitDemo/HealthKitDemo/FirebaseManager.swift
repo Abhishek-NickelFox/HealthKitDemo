@@ -20,7 +20,7 @@ class FirebaseManager {
     }
     
     func add(item: HealthData) {
-        self.tableRef.setValue(item.dictionary)
+        self.tableRef.childByAutoId().setValue(item.dictionary)
     }
     
 }
