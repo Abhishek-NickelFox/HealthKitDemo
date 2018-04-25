@@ -107,9 +107,6 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
             self.startStopButton.setTitle("Stop")
             self.startWorkout()
         }
-        
-        // SEND MESSAGE TO MAIN APP
-//        self.interactMainApp()
     }
     
     func startWorkout() {
@@ -159,12 +156,15 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
         DispatchQueue.main.async {
             guard let sample = heartRateSamples.first else{return}
             let value = sample.quantity.doubleValue(for: self.heartRateUnit)
-            self.label.setText(String(UInt16(value)))
-            print(String(UInt16(value)))
+            let stringValue = String(UInt16(value))
+            self.label.setText(stringValue)
             // retrieve source from sample
             let name = sample.sourceRevision.source.name
             self.updateDeviceName(name)
             self.animateHeart()
+            
+            // SEND MESSAGE TO MAIN APP
+            self.interactMainApp(rate: stringValue)
         }
     }
     
@@ -194,15 +194,12 @@ class InterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
 
 extension InterfaceController {
     
-    func interactMainApp() {
-//        WKInterfaceController.openParentApplication([:], reply: { (replyDictionary, error) -> Void in
-//            // Code to be executed when parent app replies
-//
-//        })
-        
-        
-        let message: [String: Any] = ["test": 12456]
-        
+    func interactMainApp(rate: String) {
+        let currentTime = Date()
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        let timestamp = dateformatter.string(from: currentTime)
+        let message: [String: Any] = ["rate": rate, "timestamp": timestamp]
         WCSession.default.sendMessage(message, replyHandler: nil) { (error) in
             print(error)
         }

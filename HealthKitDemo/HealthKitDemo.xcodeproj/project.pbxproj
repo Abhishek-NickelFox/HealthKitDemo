@@ -25,6 +25,7 @@
 		46266A7C208E36B1005912ED /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46266A7B208E36B1005912ED /* NotificationController.swift */; };
 		46266A7E208E36B2005912ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46266A7D208E36B2005912ED /* Assets.xcassets */; };
 		46266A83208E36B2005912ED /* HKDemo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 46266A66208E36B0005912ED /* HKDemo.app */; };
+		4633DC6F20901FD5006F216D /* HeartRateQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4633DC6E20901FD4006F216D /* HeartRateQueue.swift */; };
 		46682CC9208F406800A4F11B /* ModelFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46682CC8208F406800A4F11B /* ModelFile.swift */; };
 		46F1A416208F2EA300DCA37D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */; };
 		892A0B2483C5316351DC22D0 /* Pods_HKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C50E9BC9047241E85E6C8A7 /* Pods_HKDemo.framework */; };
@@ -99,6 +100,7 @@
 		46266A7D208E36B2005912ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46266A7F208E36B2005912ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46266A80208E36B2005912ED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4633DC6E20901FD4006F216D /* HeartRateQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateQueue.swift; sourceTree = "<group>"; };
 		46682CC8208F406800A4F11B /* ModelFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFile.swift; sourceTree = "<group>"; };
 		46F1A414208EF6EC00DCA37D /* HKDemo Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "HKDemo Extension.entitlements"; path = "HKDemo Extension/HKDemo Extension.entitlements"; sourceTree = SOURCE_ROOT; };
 		46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		46131A2F208DF2A8005FB331 /* HealthManager */ = {
 			isa = PBXGroup;
 			children = (
+				4633DC6E20901FD4006F216D /* HeartRateQueue.swift */,
 				46131A30208DF34E005FB331 /* HealthManager.swift */,
 			);
 			path = HealthManager;
@@ -545,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46153628208F3622005FA296 /* FirebaseManager.swift in Sources */,
+				4633DC6F20901FD5006F216D /* HeartRateQueue.swift in Sources */,
 				46131A1C208DEF1B005FB331 /* ViewController.swift in Sources */,
 				46131A31208DF34E005FB331 /* HealthManager.swift in Sources */,
 				46682CC9208F406800A4F11B /* ModelFile.swift in Sources */,

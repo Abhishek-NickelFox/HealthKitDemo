@@ -11,6 +11,8 @@ import HealthKit
 
 class ViewController: UIViewController {
 
+    let heartRateQueue = HeartRateQueue<HealthData>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self,
@@ -24,16 +26,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addAction(_ sender: UIButton) {
-        FirebaseManager.shared.add(item: HealthData(heartRate: 44, timeStamp: "1234567890"))
+        FirebaseManager.shared.add(item: HealthData(heartRate: "44", timeStamp: "1234567890"))
     }
     
     @objc func handleNotification(_ notification: Notification) {
-        let alert = UIAlertController(title: "WATCH",
-                                      message: notification.object.debugDescription,
-                                      preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        guard let object = notification.userInfo else { return }
+        let data = HealthData(heartRate: object["rate"] as! String,
+                              timeStamp: object["timestamp"] as! String)
+        heartRateQueue.enqueue(item: data)
+        heartRateQueue.traverse()
     }
     
     deinit {

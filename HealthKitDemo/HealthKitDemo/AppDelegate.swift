@@ -64,16 +64,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      handleWatchKitExtensionRequest userInfo: [AnyHashable : Any]?,
                      reply: @escaping ([AnyHashable : Any]?) -> Void) {
-        // NOT WORKING : MAY BE DEPECRATED AFTER WATCH OS 1
         print("USER INFO: \(userInfo)")
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "APP_EXTENSION_REQUEST"),
-                                        object: userInfo)
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         print("SESSION USER INFO: \(message)")
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "APP_EXTENSION_REQUEST"),
-                                        object: message)
+        NotificationCenter.default.post(name:  Notification.Name(rawValue: "APP_EXTENSION_REQUEST"),
+                                        object: nil,
+                                        userInfo: message)
     }
     
 }
