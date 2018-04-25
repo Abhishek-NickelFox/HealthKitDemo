@@ -25,8 +25,12 @@
 		46266A7C208E36B1005912ED /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46266A7B208E36B1005912ED /* NotificationController.swift */; };
 		46266A7E208E36B2005912ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46266A7D208E36B2005912ED /* Assets.xcassets */; };
 		46266A83208E36B2005912ED /* HKDemo.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 46266A66208E36B0005912ED /* HKDemo.app */; };
-		4633DC6F20901FD5006F216D /* HeartRateQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4633DC6E20901FD4006F216D /* HeartRateQueue.swift */; };
 		46682CC9208F406800A4F11B /* ModelFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46682CC8208F406800A4F11B /* ModelFile.swift */; };
+		46D8152420905E5700A4095D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8152320905E5700A4095D /* CoreDataStack.swift */; };
+		46D815292090609800A4095D /* HealthKitDemoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46D815272090609800A4095D /* HealthKitDemoModel.xcdatamodeld */; };
+		46D8152C2090613900A4095D /* HeartRateData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8152A2090613900A4095D /* HeartRateData+CoreDataClass.swift */; };
+		46D8152D2090613900A4095D /* HeartRateData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8152B2090613900A4095D /* HeartRateData+CoreDataProperties.swift */; };
+		46D81530209063F200A4095D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8152F209063F200A4095D /* CoreDataManager.swift */; };
 		46F1A416208F2EA300DCA37D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */; };
 		892A0B2483C5316351DC22D0 /* Pods_HKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C50E9BC9047241E85E6C8A7 /* Pods_HKDemo.framework */; };
 		CF0C039EE47C2EE4008A75C6 /* Pods_HKDemo_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7912CFA5EECCD6993C070C /* Pods_HKDemo_Extension.framework */; };
@@ -100,8 +104,12 @@
 		46266A7D208E36B2005912ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46266A7F208E36B2005912ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46266A80208E36B2005912ED /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		4633DC6E20901FD4006F216D /* HeartRateQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateQueue.swift; sourceTree = "<group>"; };
 		46682CC8208F406800A4F11B /* ModelFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFile.swift; sourceTree = "<group>"; };
+		46D8152320905E5700A4095D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		46D815282090609800A4095D /* HealthKitDemoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthKitDemoModel.xcdatamodel; sourceTree = "<group>"; };
+		46D8152A2090613900A4095D /* HeartRateData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeartRateData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		46D8152B2090613900A4095D /* HeartRateData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeartRateData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		46D8152F209063F200A4095D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		46F1A414208EF6EC00DCA37D /* HKDemo Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "HKDemo Extension.entitlements"; path = "HKDemo Extension/HKDemo Extension.entitlements"; sourceTree = SOURCE_ROOT; };
 		46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C50E9BC9047241E85E6C8A7 /* Pods_HKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +176,8 @@
 		46131A18208DEF1B005FB331 /* HealthKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				46D8152E209063D700A4095D /* Entities */,
+				46D8152220905D2E00A4095D /* Database */,
 				46F1A415208F2EA300DCA37D /* GoogleService-Info.plist */,
 				46131A2F208DF2A8005FB331 /* HealthManager */,
 				46131A2E208DF28C005FB331 /* HealthKitDemo.entitlements */,
@@ -198,7 +208,6 @@
 		46131A2F208DF2A8005FB331 /* HealthManager */ = {
 			isa = PBXGroup;
 			children = (
-				4633DC6E20901FD4006F216D /* HeartRateQueue.swift */,
 				46131A30208DF34E005FB331 /* HealthManager.swift */,
 			);
 			path = HealthManager;
@@ -226,6 +235,25 @@
 				46266A80208E36B2005912ED /* PushNotificationPayload.apns */,
 			);
 			path = "HKDemo Extension";
+			sourceTree = "<group>";
+		};
+		46D8152220905D2E00A4095D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				46D8152A2090613900A4095D /* HeartRateData+CoreDataClass.swift */,
+				46D8152B2090613900A4095D /* HeartRateData+CoreDataProperties.swift */,
+				46D8152320905E5700A4095D /* CoreDataStack.swift */,
+				46D815272090609800A4095D /* HealthKitDemoModel.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		46D8152E209063D700A4095D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				46D8152F209063F200A4095D /* CoreDataManager.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		8A4AF25A024B1CA51D16A86D /* Pods */ = {
@@ -547,12 +575,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D81530209063F200A4095D /* CoreDataManager.swift in Sources */,
 				46153628208F3622005FA296 /* FirebaseManager.swift in Sources */,
-				4633DC6F20901FD5006F216D /* HeartRateQueue.swift in Sources */,
+				46D8152C2090613900A4095D /* HeartRateData+CoreDataClass.swift in Sources */,
 				46131A1C208DEF1B005FB331 /* ViewController.swift in Sources */,
+				46D815292090609800A4095D /* HealthKitDemoModel.xcdatamodeld in Sources */,
 				46131A31208DF34E005FB331 /* HealthManager.swift in Sources */,
 				46682CC9208F406800A4F11B /* ModelFile.swift in Sources */,
+				46D8152420905E5700A4095D /* CoreDataStack.swift in Sources */,
 				46131A1A208DEF1B005FB331 /* AppDelegate.swift in Sources */,
+				46D8152D2090613900A4095D /* HeartRateData+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +908,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		46D815272090609800A4095D /* HealthKitDemoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46D815282090609800A4095D /* HealthKitDemoModel.xcdatamodel */,
+			);
+			currentVersion = 46D815282090609800A4095D /* HealthKitDemoModel.xcdatamodel */;
+			path = HealthKitDemoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 46131A0E208DEF1B005FB331 /* Project object */;
 }

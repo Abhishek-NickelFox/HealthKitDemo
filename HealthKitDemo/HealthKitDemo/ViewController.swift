@@ -10,8 +10,6 @@ import UIKit
 import HealthKit
 
 class ViewController: UIViewController {
-
-    let heartRateQueue = HeartRateQueue<HealthData>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +24,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addAction(_ sender: UIButton) {
-        FirebaseManager.shared.add(item: HealthData(heartRate: "44", timeStamp: "1234567890"))
     }
     
     @objc func handleNotification(_ notification: Notification) {
         guard let object = notification.userInfo else { return }
-        let data = HealthData(heartRate: object["rate"] as! String,
+        let healthData = HealthData(heartRate: object["rate"] as! String,
                               timeStamp: object["timestamp"] as! String)
-        heartRateQueue.enqueue(item: data)
-        print("QUEUE COUNT : \(heartRateQueue.count)")
-        FirebaseManager.shared.add(item: data)
+        
+        CoreDataManager.shared.addData(data: healthData)
+        
+        print("COUNT : \(CoreDataManager.shared.rowCount())")
+//        FirebaseManager.shared.add(item: data)
+        
+        
+        
     }
     
     deinit {

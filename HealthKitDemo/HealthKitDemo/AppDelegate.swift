@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             session.activate()
         }
         
+        CoreDataManager.shared.removeAll()
+        
         return true
     }
 
@@ -51,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        CoreDataStack.shared.saveContext()
     }
 
     // AUTHORIZATION FOR WATCH
