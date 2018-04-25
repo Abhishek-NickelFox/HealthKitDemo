@@ -17,8 +17,8 @@ extension HeartRateData {
         return NSFetchRequest<HeartRateData>(entityName: "HeartRateData")
     }
 
-    @NSManaged public var id: String?
-    @NSManaged public var rate: String?
-    @NSManaged public var timestamp: String?
+    @NSManaged public var id: String
+    @NSManaged public var rate: String
+    @NSManaged public var timestamp: String
 
 }

@@ -19,7 +19,7 @@ class CoreDataManager {
     
     func rowCount() -> Int {
         var count = 0
-        let entityDesc = NSEntityDescription.entity(forEntityName: "HeartRateData", in: context)
+        let entityDesc = NSEntityDescription.entity(forEntityName: "HeartRateData", in: self.context)
         guard let entity = entityDesc else { return 0 }
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
@@ -36,7 +36,7 @@ class CoreDataManager {
     
     func addData(data: HealthData) {
         
-        let entityDesc = NSEntityDescription.entity(forEntityName: "HeartRateData", in: context)
+        let entityDesc = NSEntityDescription.entity(forEntityName: "HeartRateData", in: self.context)
         guard let entity = entityDesc else { return }
         
         let heartRateData = HeartRateData(entity: entity, insertInto: context)
@@ -54,8 +54,8 @@ class CoreDataManager {
     }
     
     public func deleteData(id: String) {
-       
-        let entityDesc = NSEntityDescription.entity(forEntityName: "HeartRateData", in: context)
+
+        let entityDesc = NSEntityDescription.entity(forEntityName: "HeartRateData", in: self.context)
         guard let entity = entityDesc else { return }
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
@@ -73,9 +73,28 @@ class CoreDataManager {
         }
     }
     
+    public func fetchAll() -> [HealthData] {
+        
+        var resultArray: [HealthData] = []
+        let entity = NSEntityDescription.entity(forEntityName: "HeartRateData", in: self.context)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
+        fetchRequest.entity = entity
+        do {
+            let results = try context.fetch(fetchRequest) as! [HeartRateData]
+            resultArray = results.map {
+                HealthData(heartRate: $0.rate,
+                           timeStamp: $0.timestamp)
+            }
+        } catch let error as NSError {
+            print("Unable to GET ALL Data \(error), \(error.userInfo)")
+        }
+        return resultArray
+    }
+    
     func removeAll() {
+        
         let context = CoreDataManager.shared.context
-        let entity = NSEntityDescription.entity(forEntityName: "HeartRateData", in: context)
+        let entity = NSEntityDescription.entity(forEntityName: "HeartRateData", in: self.context)
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
         fetchRequest.entity = entity
         do {

@@ -32,12 +32,17 @@ class ViewController: UIViewController {
                               timeStamp: object["timestamp"] as! String)
         
         CoreDataManager.shared.addData(data: healthData)
-        
-        print("COUNT : \(CoreDataManager.shared.rowCount())")
-//        FirebaseManager.shared.add(item: data)
-        
-        
-        
+        let count = CoreDataManager.shared.rowCount()
+        print("COUNT BEFORE : \(count)")
+        if count >= 5 {
+            let array = CoreDataManager.shared.fetchAll()
+            array.forEach {
+                FirebaseManager.shared.add(item: $0)
+            }
+            CoreDataManager.shared.removeAll()
+            let count = CoreDataManager.shared.rowCount()
+            print("COUNT AFTER REMOVE : \(count)")
+        }
     }
     
     deinit {

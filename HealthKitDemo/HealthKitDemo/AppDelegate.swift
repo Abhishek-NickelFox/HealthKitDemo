@@ -27,9 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             session.delegate = self
             session.activate()
         }
-        
-        CoreDataManager.shared.removeAll()
-        
+                
         return true
     }
 
