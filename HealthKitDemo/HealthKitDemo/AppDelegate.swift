@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             session.delegate = self
             session.activate()
         }
+        
+        HealthManager.shared.authorization { (_, _) in
+            
+        }
                 
         return true
     }
